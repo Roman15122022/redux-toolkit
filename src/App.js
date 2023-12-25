@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import RecipeItem from "./components/recipe-item/recipe-item";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <RecipeItem recipe={{
+                id: 1,
+                name: 'Borsch',
+            }}/>
+            <RecipeItem recipe={{
+                id: 2,
+                name: 'Pizza',
+            }}/>
+            <RecipeItem recipe={{
+                id: 3,
+                name: 'Fish',
+            }}/>
+        </div>
+    );
 }
 
 export default App;

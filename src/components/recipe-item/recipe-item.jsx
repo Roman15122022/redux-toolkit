@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 import {useAction} from "../hooks/useAction";
 
 const RecipeItem = ({recipe}) => {
-    const {favorites} = useSelector(state => state);
+    const {favorites} = useSelector(state => state.favorites);
     const {toggleToFavorites} = useAction()
     console.log(favorites)
     const isExist = favorites.some(r => r.id === recipe.id)
